@@ -1,4 +1,4 @@
-package org.alura;
+package src.main.java.org.alura;
 
 import java.util.Scanner;
 
