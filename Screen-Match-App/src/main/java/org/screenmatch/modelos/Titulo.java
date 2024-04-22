@@ -1,9 +1,8 @@
-package org.screenmatch;
+package org.screenmatch.modelos;
 
-import java.util.Date;
 import java.util.Scanner;
 
-public class Filme {
+public class Titulo {
 
     private String nome;
     private int anoDeLancamento;
@@ -84,4 +83,6 @@ public class Filme {
     public void setTotalDeAvaliacoes(int totalDeAvaliacoes) {
         this.totalDeAvaliacoes = totalDeAvaliacoes;
     }
+
+
 }

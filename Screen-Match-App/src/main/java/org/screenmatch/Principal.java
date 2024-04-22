@@ -1,9 +1,9 @@
 package org.screenmatch;
 
+import org.screenmatch.modelos.Filme;
+
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Principal {
     public static void main(String[] args) {
         /*Filme filme1 = new Filme();
@@ -24,11 +24,8 @@ public class Principal {
         System.out.print("Está incluso no plano? (sim/não): ");
         String resposta = scanner.nextLine();
 
-        if (resposta.equalsIgnoreCase("sim")) {
-            filme2.setInclusoNoPlano(true);
-        } else {
-            filme2.setInclusoNoPlano(false);
-        }
+        filme2.setInclusoNoPlano(resposta.equalsIgnoreCase("sim"));
+
         filme2.avalia();
         System.out.print("Insira outra nota: ");
         filme2.avalia();
