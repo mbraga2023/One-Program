@@ -1,6 +1,9 @@
 package org.screenmatch;
 
+import org.screenmatch.calculos.FiltroRecomendacao;
+import org.screenmatch.modelos.Episodio;
 import org.screenmatch.modelos.Filme;
+import org.screenmatch.modelos.Serie;
 
 import java.util.Scanner;
 
@@ -11,6 +14,16 @@ public class Principal {
         filme1.anoDeLancamento = 1994;
         filme1.duracaoEmMinutos = 144;
         filme1.inclusoNoPlano = true;*/
+
+        Serie serie = new Serie();
+
+        Episodio primeiro = new Episodio();
+        primeiro.setNumero(1);
+        primeiro.setSerie(serie);
+        primeiro.setTotalVisualizacores(300);
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(primeiro);
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite o nome do filme: ");

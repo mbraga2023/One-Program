@@ -30,10 +30,10 @@ public class Titulo {
         somaDasAvaliacoes += scanner.nextDouble();
         totalDeAvaliacoes ++;
     }
-    public void pegaMedia(){
+    public double pegaMedia(){
         double mediaAvaliações = somaDasAvaliacoes / totalDeAvaliacoes;
         System.out.println("Média das avaliações: " + mediaAvaliações);
-
+        return mediaAvaliações;
     }
 
     public String getNome() {
