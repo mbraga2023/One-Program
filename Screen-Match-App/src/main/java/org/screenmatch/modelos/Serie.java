@@ -1,11 +1,18 @@
 package org.screenmatch.modelos;
 
-public class Serie extends Titulo{
+import org.screenmatch.modelos.Titulo;
+import src.main.java.org.screenmatch.modelos.TituloOMDB;
+
+public class Serie extends Titulo {
     private int temporadas;
     private boolean isActive;
     private int episodios;
     private int minutosPorEpisodios;
     private int episodiosPorTemporada;
+
+    public Serie(TituloOMDB meuTituloOMDB) {
+        super(meuTituloOMDB);
+    }
 
     public int getTemporadas() {
         return temporadas;

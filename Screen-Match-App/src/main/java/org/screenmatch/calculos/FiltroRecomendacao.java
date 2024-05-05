@@ -3,7 +3,7 @@ package org.screenmatch.calculos;
 public class FiltroRecomendacao {
     private String recomendacao;
 
-    public void filtra(Classificavel classificavel){
+    public void filtra(org.screenmatch.calculos.Classificavel classificavel){
         if(classificavel.getClassificacao() >=4){
             System.out.println("Está entre os preferidos");
         } else if (classificavel.getClassificacao() >= 2){

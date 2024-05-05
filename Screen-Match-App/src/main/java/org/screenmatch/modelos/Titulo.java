@@ -1,5 +1,9 @@
 package org.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+import src.main.java.org.screenmatch.exceptions.ErroDeConversaoAnoException.ErroDeConversaoAnoException;
+import src.main.java.org.screenmatch.modelos.TituloOMDB;
+
 import java.util.Scanner;
 
 public class Titulo {
@@ -10,6 +14,15 @@ public class Titulo {
     private boolean inclusoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes = 0;
+
+    public Titulo(TituloOMDB meuTituloOMDB) {
+        this.nome = meuTituloOMDB.title();
+        if(meuTituloOMDB.year().length()>4){
+            throw new ErroDeConversaoAnoException("Não consegui converter o ano");
+        }
+        this.anoDeLancamento = Integer.valueOf(meuTituloOMDB.year());
+        this.duracaoEmMinutos = Integer.valueOf(meuTituloOMDB.runtime().substring(0,3));
+    }
 
     public void exibirFichaTecnica(){
         System.out.println("Título: " + nome);
@@ -84,5 +97,10 @@ public class Titulo {
         this.totalDeAvaliacoes = totalDeAvaliacoes;
     }
 
-
+    @Override
+    public String toString() {
+        return "Titulo " + nome + '\'' +
+                ", Ano de Lançamento: " + anoDeLancamento +
+                ", Duração em minutos: " + duracaoEmMinutos;
+    }
 }

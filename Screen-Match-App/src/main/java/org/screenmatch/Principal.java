@@ -8,12 +8,12 @@ import org.screenmatch.modelos.Serie;
 import java.util.Scanner;
 
 public class Principal {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         /*Filme filme1 = new Filme();
         filme1.nome = "Forest Gump";
         filme1.anoDeLancamento = 1994;
         filme1.duracaoEmMinutos = 144;
-        filme1.inclusoNoPlano = true;*/
+        filme1.inclusoNoPlano = true;
 
         Serie serie = new Serie();
 
@@ -45,5 +45,5 @@ public class Principal {
         System.out.println("Exibindo a ficha técnica... ");
         filme2.exibirFichaTecnica();
 
-    }
+    }*/
 }

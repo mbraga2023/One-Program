@@ -1,6 +1,7 @@
 package org.screenmatch.modelos;
 
 import org.screenmatch.calculos.Classificavel;
+import org.screenmatch.modelos.Serie;
 
 public class Episodio implements Classificavel {
 
