@@ -1,16 +1,7 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.iml
-*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
 ### Eclipse ###
 .apt_generated
@@ -20,6 +11,9 @@ target/
 .settings
 .springBeans
 .sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
 ### NetBeans ###
 /nbproject/private/
@@ -27,13 +21,28 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
 
 ### Mac OS ###
 .DS_Store
-*.xml
+.idea/compiler.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/jarRepositories.xml
+.idea/modules.xml
+.idea/One-PrimeiroApp.iml
+BankProgram/.idea/compiler.xml
+BankProgram/.idea/encodings.xml
+BankProgram/.idea/jarRepositories.xml
+BankProgram/.idea/misc.xml
+BankProgram/.idea/uiDesigner.xml
+BankProgram/.idea/vcs.xml
+One-PrimeiroApp.iml
+DesafioViaCEP/DesafioViaCEP.iml
+target/classes/.idea/compiler.xml
+target/classes/.idea/encodings.xml
+target/classes/.idea/jarRepositories.xml
+target/classes/.idea/misc.xml
+target/classes/.idea/uiDesigner.xml
+target/classes/.idea/vcs.xml
