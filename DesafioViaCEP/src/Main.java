@@ -1,18 +1,26 @@
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        try {
+            formatarCep();
+        } catch (CepInvalidoException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+    }
 
-        System.out.print("Digite o CEP (8 digitos sem espaço): ");
+    static void formatarCep() throws CepInvalidoException {
+        System.out.print("Digite o CEP (8 dígitos sem espaço): ");
 
         Scanner scanner = new Scanner(System.in);
         String codigoPostal = scanner.nextLine();
 
+        if (codigoPostal.length() < 8) {
+            throw new CepInvalidoException("CEP inválido: O CEP deve conter 8 dígitos.");
+        }
+
+        // Consulta o CEP, gera e salva o arquivo, etc.
         ConsultaCep consultaCep = new ConsultaCep();
 
         try {
@@ -20,11 +28,8 @@ public class Main {
             System.out.println(novoEndereco);
             GeradorDeArquivo gerador = new GeradorDeArquivo();
             gerador.salvaJson(novoEndereco);
-        }catch (RuntimeException | IOException e){
-            System.out.println(e.getMessage());
-            System.out.println("finalizando a aplicação...");
-
+        } catch (IOException e) {
+            System.out.println("Erro de I/O ao buscar ou salvar o endereço: " + e.getMessage());
         }
-
     }
 }
